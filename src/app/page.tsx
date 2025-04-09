@@ -18,8 +18,8 @@ export default function Home() {
       } else {
         setErroPhoneNumber(true);
       }
-      setPhoneNumber(phone);
     }
+    setPhoneNumber(phone);
   }
 
   return (
@@ -28,7 +28,7 @@ export default function Home() {
         <h1 className="text-4xl md:text-7xl">Link Generator</h1>
         <h1 className="text-3xl text-[#25D366] md:text-5xl">Whatsapp</h1>
       </header>
-      <main className="w-full h-full flex items-center justify-center mt-5">
+      <main className="w-full h-full flex items-center justify-center mt-5 flex-col gap-5">
         <form className="flex flex-col gap-5" method="POST">
           <div className="flex flex-col">
             <label htmlFor="phoneNumber">phone number</label>
@@ -69,6 +69,10 @@ export default function Home() {
           <button className="bg-[#25D366] p-2 text-white tracking-wider rounded-lg shadow-lg shadow-[#25D366]/50 mt-2 cursor-pointer hover:tracking-widest transition-all hover:bg-[#128c7e]">
             Generate
           </button>
+          <div className="bg-[#DFDFDF] w-full p-3 border-2 border-gray-300 rounded-sm flex">
+            <span></span>
+            <button></button>
+          </div>
         </form>
       </main>
       <footer className="absolute bottom-1 w-full text-center">
