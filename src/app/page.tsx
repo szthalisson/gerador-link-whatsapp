@@ -2,6 +2,7 @@
 
 import { useState, useEffect, FormEvent } from "react";
 import { FaRegCopy } from "react-icons/fa";
+import { ToastContainer, Zoom, toast } from "react-toastify";
 import Input, { isValidPhoneNumber } from "react-phone-number-input/input";
 
 export default function Home() {
@@ -40,6 +41,7 @@ export default function Home() {
   }
 
   function copyLink() {
+    toast.success("Copiado para área de transferência!");
     navigator.clipboard.writeText(linkUrl);
   }
 
@@ -132,6 +134,14 @@ export default function Home() {
           <></>
         )}
       </main>
+      <ToastContainer
+        autoClose={3000}
+        position="top-right"
+        hideProgressBar={true}
+        closeOnClick={true}
+        theme="colored"
+        transition={Zoom}
+      />
       <footer className="absolute bottom-1 w-full text-center">
         <span>Developer @szthalisson</span>
       </footer>
